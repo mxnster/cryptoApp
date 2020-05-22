@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>CryptOn</title>
+</head>
+
+<body>
+    <div class="tabs-container">
+        <ul class="tabss">
+            <li class="active">
+                <a href="">Exchange rates</a>
+            </li>
+            <li>
+                <a href="">Exchanges list</a>
+            </li>
+            <li>
+                <a href="">Coins list</a>
+            </li>
+            <li>
+                <a href="">Converter</a>
+            </li>
+        </ul>
+        <div class="tabs-content">
+            <div class="tabs-panel active" data-index="0">
+                <table class="table table-striped table-hover">
+                    <thead id="thead-rates"></thead>
+                    <tbody id="tbody-rates">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="tabs-panel" data-index="1">
+                <table class="table table-striped table-hover">
+                    <thead id="thead-exchanges"></thead>
+                    <tbody id="tbody-exchanges">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="tabs-panel" data-index="2">
+                <table class="table table-striped table-hover">
+                    <thead id="thead-coins"></thead>
+                    <tbody id="tbody-coins">
+
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="tabs-panel" data-index="3">
+                <div>
+                    <div class="line">
+                        <select id="from" class="form-control"></select>
+                        <input type="number" step="0.1" id="value" value="1" class="info" />
+                    </div>
+                    <div class="line">
+                        <select id="to" class="form-control"></select>
+                        <span id="result" class="info"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fade">
+        <div id="menu">
+            <button id="close" class="btn btn-secondary">Close</button>
+            <div id="container"></div>
+            <div id="graph-container" style="height: 600px; width: 510px"></div>
+        </div>
+    </div>
+
+
+    <script src="dist/main.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.14.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>
